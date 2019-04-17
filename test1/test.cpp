@@ -7,9 +7,10 @@
 
 int main(int argc, char** argv)
 {
-    QApplication app(argc, argv);
+    QApplication a(argc, argv);
 
     QTextEdit* textEdit = new QTextEdit;
+
     QPushButton* quitButton = new QPushButton("&Quit");
 
     QObject::connect(quitButton, SIGNAL(clicked()), qApp, SLOT(quit()));
@@ -23,6 +24,6 @@ int main(int argc, char** argv)
 
     window.show();
 
-    return app.exec();
+    return a.exec();
 }
 
